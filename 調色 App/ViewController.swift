@@ -10,11 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var alphaSlider: UISlider!
+    @IBOutlet weak var blueSlider: UISlider!
+    @IBOutlet weak var greenSlider: UISlider!
+    @IBOutlet weak var redSlider: UISlider!
+    @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-
+    
+    
+    @IBAction func colorSliderChange(_ sender: UISlider) {
+         imageView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: CGFloat(alphaSlider.value))
+        
+    }
+    
+    
+ 
 }
 
